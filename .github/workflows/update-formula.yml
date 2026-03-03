@@ -9,6 +9,10 @@ on:
         description: "Version to update to (e.g. v0.2.0)"
         required: true
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
