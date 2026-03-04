@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   update:
@@ -38,13 +37,10 @@ jobs:
           chmod +x scripts/update-formula.sh
           ./scripts/update-formula.sh "${{ steps.version.outputs.num }}" checksums.txt
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "Update skilltap to ${{ steps.version.outputs.tag }}"
-          title: "skilltap ${{ steps.version.outputs.tag }}"
-          branch: "update-${{ steps.version.outputs.tag }}"
-          body: |
-            Auto-update formula for skilltap ${{ steps.version.outputs.tag }}.
-
-            Triggered by release workflow.
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/skilltap.rb
+          git diff --cached --quiet || git commit -m "Update skilltap to ${{ steps.version.outputs.tag }}"
+          git push origin main
