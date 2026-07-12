@@ -1,28 +1,28 @@
 class Skilltap < Formula
-  desc "CLI for installing agent skills from any git host"
+  desc "Personal control plane for Codex and Claude Code environments"
   homepage "https://github.com/nklisch/skilltap"
-  version "2.2.6"
+  version "3.0.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-darwin-arm64"
-      sha256 "11f12671358c96b7de232c7010e86a4b802595a7d6b62e025b5032f6cefc8cc1"
+      sha256 "4687ee63ebc33e729afa74dfa885005026d72f1769918dcd54fe6e4729f81fa9"
     end
     on_intel do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-darwin-x64"
-      sha256 "8fe64c47578b593da62a8ef9d17d7cbb4f22417c6890c30ae37ef0aede65458b"
+      sha256 "4da76eca7b9429d8e0abbbf5678c7784ded6f5fbacbc407d55f36c66c17f57ab"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-linux-arm64"
-      sha256 "07ef043169001c5f700027775121b9dc6692f7758c0977624ebf915de201cd78"
+      sha256 "26ab57262b9b495baee5a3ca5717841e1e56e92aac600ab67eb1841b9dbe2627"
     end
     on_intel do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-linux-x64"
-      sha256 "d57543b3b33071f284c7e74f3ea77bc432786433e3d8296c9620a835c8f68f24"
+      sha256 "422254820cb640830f523b0d85e3294e049fe06b39b8dd2fe5a89d52772b519d"
     end
   end
 
