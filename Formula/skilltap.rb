@@ -1,28 +1,28 @@
 class Skilltap < Formula
   desc "Personal control plane for Codex and Claude Code environments"
   homepage "https://github.com/nklisch/skilltap"
-  version "3.0.3"
+  version "3.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-darwin-arm64"
-      sha256 "cc1b26ee99f0f653d54ac40f69d27fcc9c862335992ec22bb70c03c117ba3afb"
+      sha256 "ef248df067357ab77773f91826b68bc79001a254778a51974f3f5cee0af2340a"
     end
     on_intel do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-darwin-x64"
-      sha256 "ec0e6f17f975c431edee37e1ec9bcab98a600572a5102ba5c5fcdbfb3089b6d0"
+      sha256 "c521f5381831df9d31eb67e2e35fecd44fd6ac5e0c6bdca85497d565225df503"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-linux-arm64"
-      sha256 "b89b55aa378fe18894f86bffafbecaab839107cf7d44f5bfd25433e739a00569"
+      sha256 "f9c20d2e2835a72616142e1a77be9d3b5a281fc837b2865ccbe1faa19a194a15"
     end
     on_intel do
       url "https://github.com/nklisch/skilltap/releases/download/v#{version}/skilltap-linux-x64"
-      sha256 "68c2a22e380ebdbe3ef97872ad63ea01fb0cd297aec77c868253c048c898de7b"
+      sha256 "283367141b9b5b977e1d00befd3c193b6f89c344aec010e2c6b0040d47baec7b"
     end
   end
 
